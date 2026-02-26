@@ -26,12 +26,10 @@ export const io = new Server(server, {
   },
 });
 // App Use Default Middleware
-app.use(
-  cors({
-    origin: "https://protfolio-frontend-0n64.onrender.com", // **no trailing slash**
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: "https://protfolio-frontend-0n64.onrender.com",
+  credentials: true
+}));
 
 // cookie-parser
 app.use(cookieParser());
