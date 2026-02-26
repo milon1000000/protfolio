@@ -11,7 +11,7 @@ function Contact() {
     message: "",
   });
 
-  const [send,setSend]=useState(false)
+  const [send, setSend] = useState(false);
 
   // Handle input change
   const handleChange = (e) => {
@@ -24,7 +24,7 @@ function Contact() {
   // Handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-      setSend(true)
+    setSend(true);
 
     try {
       const result = await axios.post(
@@ -42,9 +42,9 @@ function Contact() {
       } else {
         toast.error(result.data.message || "Failed to send message");
       }
-      setSend(false)
+      setSend(false);
     } catch (error) {
-      setSend(false)
+      setSend(false);
       if (
         error.response &&
         error.response.data &&
@@ -80,7 +80,7 @@ function Contact() {
 
         {/* Form Card */}
         <div className="max-w-3xl mx-auto bg-white/8 backdrop-blur-lg border border-gray-200 rounded-2xl p-10 shadow-xl">
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6 relative" onSubmit={handleSubmit}>
             {/* Name */}
             <div>
               <label className="block text-gray-300 mb-2">Your Name</label>
@@ -128,20 +128,24 @@ function Contact() {
               className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-lg transition"
               disabled={send}
             >
-              {send?"sending":"send"}
+              {send ? "sending" : "send"}
             </motion.button>
 
             {/* Toast Container */}
             <ToastContainer
-              position="top-right"
+              position={window.innerWidth < 640 ? "top-center" : "top-right"}
               autoClose={3000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
+              style={{ zIndex: 9999 }}
+              toastStyle={
+                window.innerWidth < 640
+                  ? {
+                      width: "60%",
+                      fontSize: "14px",
+                      padding: "10px",
+                      minHeight: "50px",
+                    }
+                  : {}
+              }
             />
           </form>
         </div>

@@ -24,7 +24,7 @@ export const contactController = async (req, res) => {
       email,
       message,
     });
-    sendMail(name,email,message);
+   await sendMail(name,email,message);
 
     return res
       .status(200)
