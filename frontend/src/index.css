@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* typewriter.css */
+.typewriter {
+  overflow: hidden;              
+  border-right: 0.15rem solid #885cF6; 
+  white-space: nowrap;            
+  width: 0;                   
+  animation: typing 3s steps(20, end) forwards,
+             blink-caret 0.75s step-end infinite; 
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 18ch; } 
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50%      { border-color: #885cF6; }
+}
