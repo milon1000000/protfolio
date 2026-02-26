@@ -21,13 +21,13 @@ const app = express();
 let server = http.createServer(app);
 export const io = new Server(server, {
   cors: {
-    origin: "https://protfolio-frontend-0n64.onrender.com",
+    origin: "http://localhost:5173",
     credentials: true,
   },
 });
 // App Use Default Middleware
 app.use(cors({
-  origin: "https://protfolio-frontend-0n64.onrender.com",
+  origin: "http://localhost:5173",
   credentials: true
 }));
 
