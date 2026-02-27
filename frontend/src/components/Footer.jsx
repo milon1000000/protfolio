@@ -11,7 +11,7 @@ function Footer() {
         <div className="flex space-x-6 text-3xl">
           <motion.a
             whileHover={{ scale: 1.2 }}
-            href="https://github.com/"
+            href="https://github.com/milon1000000"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition duration-300"
@@ -21,7 +21,7 @@ function Footer() {
 
           <motion.a
             whileHover={{ scale: 1.2 }}
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/md-mahinur-rahman-milon-a70748317"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition duration-300"
@@ -31,7 +31,7 @@ function Footer() {
 
           <motion.a
             whileHover={{ scale: 1.2 }}
-            href="https://facebook.com/"
+            href="https://www.facebook.com/share/1ARB8y5bZ7/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-600 transition duration-300"
