@@ -111,7 +111,7 @@ export const contactController = async (req, res) => {
     // Send email (try/catch to avoid breaking response)
     let emailSent = false;
     try {
-      await sendMail(name, email, message);
+       sendMail(name, email, message);
       emailSent = true;
     } catch (err) {
       console.error("Email failed:", err);

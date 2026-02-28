@@ -103,7 +103,7 @@ import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 dotenv.config();
 
-export const sendMail = async (name, email, message) => {
+export const sendMail =  (name, email, message) => {
   try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -135,7 +135,7 @@ Your Portfolio Website
       `,
     };
 
-    const info = await transporter.sendMail(mailConfigurations);
+    const info =  transporter.sendMail(mailConfigurations);
     console.log("Email sent Successfully:", info.response);
     return true;
   } catch (error) {
