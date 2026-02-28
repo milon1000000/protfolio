@@ -21,16 +21,16 @@ const app = express();
 let server = http.createServer(app);
 export const io = new Server(server, {
   cors: {
-    origin: "https://protfolio-frontend-2j8c.onrender.com",
+    origin: "http://localhost:5173",
     credentials: true,
   },
 });
 // App Use Default Middleware
 app.use(cors({
-  origin: "https://protfolio-frontend-2j8c.onrender.com",
+  origin: "http://localhost:5173",
   credentials: true
 }));
-
+// https://protfolio-frontend-2j8c.onrender.com
 // cookie-parser
 app.use(cookieParser());
 
