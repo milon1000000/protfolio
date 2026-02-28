@@ -117,9 +117,9 @@ export const sendMail = async (name, email, message) => {
     // Email পাঠানোর আগে verify করুন (optional কিন্তু ভালো practice)
     transporter.verify((error, success) => {
       if (error) {
-        console.log("❌ SMTP Connection Error:", error);
+        console.log("SMTP Connection Error:", error);
       } else {
-        console.log("✅ SMTP Connection Verified");
+        console.log("SMTP Connection Verified");
       }
     });
 
@@ -147,11 +147,11 @@ export const sendMail = async (name, email, message) => {
     };
 
     const info = await transporter.sendMail(mailConfigurations);
-    console.log("✅ Email sent successfully:", info.messageId);
+    console.log("Email sent successfully:", info.messageId);
     return { success: true, messageId: info.messageId };
 
   } catch (error) {
-    console.error("❌ Email sending failed:", error.message);
+    console.error("Email sending failed:", error.message);
     console.error("Full error:", error);  // বিস্তারিত error দেখতে
     throw error;
   }
