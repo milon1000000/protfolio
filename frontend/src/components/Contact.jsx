@@ -125,7 +125,7 @@ function Contact() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="w-full bg-red-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-lg transition"
+              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-lg transition"
               disabled={send}
             >
               {send ? "sending" : "send"}
