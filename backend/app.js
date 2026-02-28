@@ -22,7 +22,7 @@ const app = express();
 // CORS
 app.use(
   cors({
-    origin: "https://protfolio-frontend-2j8c.onrender.com",
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );
